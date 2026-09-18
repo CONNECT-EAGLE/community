@@ -31,4 +31,5 @@ The original intertidal repository exercised scientific README/license discovery
 - Organization defaults, Discussions, branch protections and named moderation/security contacts are not yet active.
 - No PyPI release is published.
 - No live project is enrolled without its maintainer's review.
-- GitHub publication is blocked: branch creation returned HTTP 403, `Resource not accessible by integration`. No remote branch or PR was created, so GitHub Actions has not run. Only the Linux/Python 3.12 local test results are verified; Windows/macOS and Python 3.11 are configured, not yet verified.
+- GitHub publication succeeded after the connector was installed on the organization: [PR #2](https://github.com/CONNECT-SBG/testrepo/pull/2) from `feat/connect-eagle-foundation`, with no direct changes to `main`.
+- GitHub Actions runs six jobs: Linux, macOS and Windows on Python 3.11/3.12. The initial run passed all four Linux/macOS jobs and exposed a Windows test-harness limit: pytest used the 64 KiB invalid-YAML fixture as an environment-variable value. Explicit short case IDs correct that failure without reducing fixture size or validation coverage. See the [current PR checks](https://github.com/CONNECT-SBG/testrepo/pull/2/checks) for results on the latest commit.

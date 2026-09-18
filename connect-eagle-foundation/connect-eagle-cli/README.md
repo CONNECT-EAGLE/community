@@ -12,7 +12,7 @@ From this directory:
 pipx install .
 ```
 
-After the prepared foundation feature branch is pushed, this installation URL will work:
+Install the published foundation feature branch directly:
 
 ```sh
 pipx install 'git+https://github.com/CONNECT-SBG/testrepo.git@feat/connect-eagle-foundation#subdirectory=connect-eagle-foundation/connect-eagle-cli'
@@ -73,4 +73,4 @@ python -m ruff check src tests
 python -m build
 ```
 
-See `docs/metadata-v1.md` and `docs/architecture.md`. The prepared CI matrix covers Windows, macOS and Linux on Python 3.11 and 3.12; it has not run remotely yet. Network mutation is contract-tested using a fake GitHub API; see the foundation verification report for the exact live checks performed.
+See `docs/metadata-v1.md` and `docs/architecture.md`. The CI matrix runs on Windows, macOS and Linux with Python 3.11 and 3.12; see [PR #2 checks](https://github.com/CONNECT-SBG/testrepo/pull/2/checks) for current results. Network mutation is contract-tested using a fake GitHub API; see the foundation verification report for the exact live checks performed.

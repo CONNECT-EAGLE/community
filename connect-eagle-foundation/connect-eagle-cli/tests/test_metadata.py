@@ -24,6 +24,10 @@ def test_valid_roundtrip(record):
         "[a, b]: c",
         "1: value",
     ],
+    # Pytest stores the case ID in PYTEST_CURRENT_TEST. Keep the oversized
+    # document out of that ID so Windows can set the environment variable.
+    ids=["duplicate-key", "alias", "sequence", "unsafe-tag", "syntax", "oversized",
+         "complex-key", "non-string-key"],
 )
 def test_invalid_yaml(text):
     with pytest.raises(EagleError):

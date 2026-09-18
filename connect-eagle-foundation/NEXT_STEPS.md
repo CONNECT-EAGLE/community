@@ -1,6 +1,6 @@
 # Engineering handoff
 
-The implemented v0.1 is committed locally under `connect-eagle-foundation/` on `feat/connect-eagle-foundation`, based on `CONNECT-SBG/testrepo`. GitHub rejected branch creation with HTTP 403; there is no remote branch or PR yet. Historical scientific files remain intact. Start with `VERIFICATION.md` for current evidence and `AUDIT_AND_MIGRATION.md` for migration decisions.
+The implemented v0.1 is published under `connect-eagle-foundation/` on `feat/connect-eagle-foundation` in `CONNECT-SBG/testrepo`: [PR #2](https://github.com/CONNECT-SBG/testrepo/pull/2). Installing the connector on the organization resolved the initial HTTP 403. Historical scientific files remain intact. Start with `VERIFICATION.md` for current evidence and `AUDIT_AND_MIGRATION.md` for migration decisions.
 
 ## Run now
 
@@ -16,7 +16,7 @@ Run `connect-eagle init` inside a disposable project, followed by `doctor`, `sta
 
 ## Next launch work
 
-1. Restore integration write access for `CONNECT-SBG/testrepo` or publish the included Git bundle from an authenticated local clone. Follow the delivery archive’s `START_HERE.md`. Then open a PR and inspect CI. No remote CI has run yet.
+1. Review [PR #2](https://github.com/CONNECT-SBG/testrepo/pull/2) and its six-platform/version CI matrix. The feature branch is published; merging remains a maintainer decision. The earlier delivery archive records the pre-publication snapshot, so use the branch for current source and handoff instructions.
 2. Create six destination repositories under the chosen owner: `connect-eagle-cli`, `project-registry`, `templates`, `community`, `.github`, `website`. The current connector cannot create them; creation can be done in an authenticated GitHub session. Do not rename or archive legacy assets as part of this step.
 3. From a clean clone with the feature branch checked out, use `git subtree split --prefix=connect-eagle-foundation/COMPONENT -b split/COMPONENT` for each directory. `org-profile` maps to `.github`. This creates new split history without changing the original repository's history. Push each split to a feature branch in its initialized destination and open a PR against the destination's bootstrap `main`.
 4. Merge the reviewed registry foundation so `projects/README.md` exists on its default branch. Configure `CONNECT_EAGLE_REGISTRY=OWNER/project-registry` for contributor instructions.

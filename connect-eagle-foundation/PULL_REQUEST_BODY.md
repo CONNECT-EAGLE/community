@@ -13,7 +13,7 @@ Validation:
 - 57 local automated tests pass on Linux/Python 3.12; lint passes.
 - Three real repositories passed disposable-clone offline onboarding and submission preparation with tracked files unchanged.
 - Five template examples validate; source and wheel distributions build; a clean wheel installation passes the smoke workflow.
-- The workflow matrix prepares Windows/macOS/Linux tests on Python 3.11/3.12. Remote CI must be checked after this PR is created.
+- The workflow matrix runs Windows/macOS/Linux tests on Python 3.11/3.12. See the PR checks for current results. Short explicit test-case IDs address the Windows environment-variable limit found by the initial run.
 
 Limits:
 
