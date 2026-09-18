@@ -16,7 +16,7 @@ Run `connect-eagle init` inside a disposable project, followed by `doctor`, `sta
 
 ## Next launch work
 
-1. Review [PR #2](https://github.com/CONNECT-SBG/testrepo/pull/2) and its six-platform/version CI matrix. The feature branch is published; merging remains a maintainer decision. The earlier delivery archive records the pre-publication snapshot, so use the branch for current source and handoff instructions.
+1. PR #2 is merged after all six platform/version checks passed. Use the public hub's [Start here](../START_HERE.md) and [community launch checklist](../COMMUNITY_SETUP.md) for the current contributor rollout. The earlier delivery archive records a pre-publication snapshot; use GitHub's default branch for current source and guidance.
 2. Create six destination repositories under the chosen owner: `connect-eagle-cli`, `project-registry`, `templates`, `community`, `.github`, `website`. The current connector cannot create them; creation can be done in an authenticated GitHub session. Do not rename or archive legacy assets as part of this step.
 3. From a clean clone with the feature branch checked out, use `git subtree split --prefix=connect-eagle-foundation/COMPONENT -b split/COMPONENT` for each directory. `org-profile` maps to `.github`. This creates new split history without changing the original repository's history. Push each split to a feature branch in its initialized destination and open a PR against the destination's bootstrap `main`.
 4. Merge the reviewed registry foundation so `projects/README.md` exists on its default branch. Configure `CONNECT_EAGLE_REGISTRY=OWNER/project-registry` for contributor instructions.

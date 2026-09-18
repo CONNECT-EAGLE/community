@@ -1,0 +1,37 @@
+name: Project submission
+description: Connect an existing project without moving it.
+body:
+- type: markdown
+  attributes:
+    value: Thank you for contributing. Keep this concise; uncertainty and requests
+      for help are welcome. Do not include credentials or private information.
+- type: textarea
+  id: repository
+  attributes:
+    label: Repository and maintainer
+    description: Public URL; maintainer name; explain your authority or agreement
+      to submit.
+  validations:
+    required: true
+- type: textarea
+  id: description
+  attributes:
+    label: Project description
+    description: Purpose, VSWIR/TIR/supporting-EO relevance, and project type.
+  validations:
+    required: true
+- type: textarea
+  id: status
+  attributes:
+    label: Status and collaboration
+    description: Planning/active/maintenance/completed/archived; help wanted and prerequisites.
+  validations:
+    required: true
+- type: textarea
+  id: reuse
+  attributes:
+    label: License and citation
+    description: Existing license/citation links, or say not yet available. Do not
+      invent them.
+  validations:
+    required: true

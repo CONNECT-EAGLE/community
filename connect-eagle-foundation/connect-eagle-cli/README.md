@@ -12,10 +12,10 @@ From this directory:
 pipx install .
 ```
 
-Install the published foundation feature branch directly:
+Install the current published source:
 
 ```sh
-pipx install 'git+https://github.com/CONNECT-SBG/testrepo.git@feat/connect-eagle-foundation#subdirectory=connect-eagle-foundation/connect-eagle-cli'
+pipx install 'git+https://github.com/CONNECT-SBG/testrepo.git@main#subdirectory=connect-eagle-foundation/connect-eagle-cli'
 ```
 
 The package is **not yet published to PyPI**. `pipx install connect-eagle` is the intended release experience, not a currently promised package name. Check name availability before publishing.

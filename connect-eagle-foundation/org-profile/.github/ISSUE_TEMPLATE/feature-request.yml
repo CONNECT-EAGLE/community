@@ -1,0 +1,21 @@
+name: Feature request
+description: Propose a focused improvement.
+body:
+- type: markdown
+  attributes:
+    value: Thank you for contributing. Keep this concise; uncertainty and requests
+      for help are welcome. Do not include credentials or private information.
+- type: textarea
+  id: problem
+  attributes:
+    label: What problem would this solve?
+    description: Who needs it, and what is difficult today?
+  validations:
+    required: true
+- type: textarea
+  id: outcome
+  attributes:
+    label: What should happen?
+    description: Describe the smallest useful outcome and alternatives.
+  validations:
+    required: true

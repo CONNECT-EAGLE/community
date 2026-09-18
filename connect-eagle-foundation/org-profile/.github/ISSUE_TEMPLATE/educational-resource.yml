@@ -1,0 +1,28 @@
+name: Educational resource proposal
+description: Share or propose a useful learning resource.
+body:
+- type: markdown
+  attributes:
+    value: Thank you for contributing. Keep this concise; uncertainty and requests
+      for help are welcome. Do not include credentials or private information.
+- type: textarea
+  id: resource
+  attributes:
+    label: Resource or proposal
+    description: URL/title or a concise description of what you want to create.
+  validations:
+    required: true
+- type: textarea
+  id: audience
+  attributes:
+    label: Who is it for?
+    description: Prerequisites, VSWIR/TIR relevance, and learning outcome.
+  validations:
+    required: true
+- type: textarea
+  id: terms
+  attributes:
+    label: Reuse and accessibility
+    description: Author, license/reuse terms, and accessibility considerations.
+  validations:
+    required: true
