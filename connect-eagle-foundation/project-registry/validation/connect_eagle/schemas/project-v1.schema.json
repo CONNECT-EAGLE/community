@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "C.O.N.N.E.C.T. EAGLE project metadata v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "type": "integer",
+      "const": 1
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+        },
+        "slug": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+        }
+      },
+      "required": [
+        "name",
+        "slug",
+        "description"
+      ]
+    },
+    "eagle": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mission": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "VSWIR",
+              "TIR",
+              "supporting-technology"
+            ]
+          },
+          "maxItems": 3,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "maxItems": 20,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "mission",
+        "topics"
+      ]
+    },
+    "project_type": {
+      "enum": [
+        "research",
+        "software",
+        "dataset",
+        "tutorial",
+        "working-group"
+      ]
+    },
+    "status": {
+      "enum": [
+        "planning",
+        "active",
+        "maintenance",
+        "completed",
+        "archived"
+      ]
+    },
+    "collaboration": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "open": {
+          "type": "boolean"
+        },
+        "looking_for": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          },
+          "maxItems": 15,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "open",
+        "looking_for"
+      ]
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "pattern": "^https://[^\\s/?#@]+/[^\\s/?#]+/[^\\s?#]+$"
+    },
+    "maintainers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          },
+          "github": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 39,
+            "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$"
+          },
+          "orcid": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 37,
+            "pattern": "^https://orcid.org/\\d{4}-\\d{4}-\\d{4}-\\d{3}[\\dX]$"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "maxItems": 20,
+      "uniqueItems": true
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          },
+          "github": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 39,
+            "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$"
+          },
+          "orcid": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 37,
+            "pattern": "^https://orcid.org/\\d{4}-\\d{4}-\\d{4}-\\d{3}[\\dX]$"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "maxItems": 100,
+      "uniqueItems": true
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "documentation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^https://[^\\s/?#@]+/[^\\s?]+$"
+        },
+        "demo": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^https://[^\\s/?#@]+/[^\\s?]+$"
+        },
+        "datasets": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048,
+            "pattern": "^https://[^\\s/?#@]+/[^\\s?]+$"
+          },
+          "maxItems": 30,
+          "uniqueItems": true
+        }
+      },
+      "required": []
+    },
+    "publications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048,
+            "pattern": "^https://[^\\s/?#@]+/[^\\s?]+$"
+          },
+          "doi": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^10\\.\\d{4,9}/\\S+$"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      },
+      "maxItems": 30,
+      "uniqueItems": true
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+    },
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cff": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^(?!/)(?!.*\\.\\.)(?!.*\\\\)[A-Za-z0-9_./-]+\\.cff$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+        },
+        "doi": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^10\\.\\d{4,9}/\\S+$"
+        }
+      },
+      "required": []
+    }
+  },
+  "required": [
+    "schema",
+    "project",
+    "eagle",
+    "project_type",
+    "status",
+    "collaboration",
+    "repository"
+  ]
+}

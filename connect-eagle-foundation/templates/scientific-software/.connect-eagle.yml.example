@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "project": {
+    "name": "Example Scientific Software / Tool",
+    "slug": "example-scientific-software",
+    "description": "Illustrative scientific software / tool metadata; replace before submitting."
+  },
+  "eagle": {
+    "mission": [
+      "supporting-technology"
+    ],
+    "topics": []
+  },
+  "project_type": "software",
+  "status": "planning",
+  "collaboration": {
+    "open": false,
+    "looking_for": []
+  },
+  "repository": "https://github.com/example/example-scientific-software"
+}

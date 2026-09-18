@@ -1,0 +1,13 @@
+name: Ask for help
+description: Get help joining, using a tool or finding a starting task
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried, and where are you stuck?

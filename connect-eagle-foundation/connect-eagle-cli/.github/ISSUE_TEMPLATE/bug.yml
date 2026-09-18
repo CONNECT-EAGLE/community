@@ -1,0 +1,20 @@
+name: Bug report
+description: Report a reproducible problem
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps and actual result
+      description: Include the command and a small public example. Remove secrets.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Tool version, operating system and Python version

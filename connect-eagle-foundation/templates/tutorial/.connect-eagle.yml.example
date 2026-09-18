@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "project": {
+    "name": "Example Tutorial / Educational Resource",
+    "slug": "example-tutorial",
+    "description": "Illustrative tutorial / educational resource metadata; replace before submitting."
+  },
+  "eagle": {
+    "mission": [
+      "supporting-technology"
+    ],
+    "topics": []
+  },
+  "project_type": "tutorial",
+  "status": "planning",
+  "collaboration": {
+    "open": false,
+    "looking_for": []
+  },
+  "repository": "https://github.com/example/example-tutorial"
+}

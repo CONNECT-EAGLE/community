@@ -1,0 +1,1 @@
+Choose a license appropriate to the work and its existing obligations. Add the full license as LICENSE and set metadata. For mixed code/data/materials, document separate licenses clearly. Do not assume the starter template license applies to your project.
