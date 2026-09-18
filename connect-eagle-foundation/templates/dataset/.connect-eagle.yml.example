@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "project": {
+    "name": "Example Dataset",
+    "slug": "example-dataset",
+    "description": "Illustrative dataset metadata; replace before submitting."
+  },
+  "eagle": {
+    "mission": [
+      "supporting-technology"
+    ],
+    "topics": []
+  },
+  "project_type": "dataset",
+  "status": "planning",
+  "collaboration": {
+    "open": false,
+    "looking_for": []
+  },
+  "repository": "https://github.com/example/example-dataset"
+}

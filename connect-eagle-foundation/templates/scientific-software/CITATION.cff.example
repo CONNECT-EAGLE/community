@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "Replace the example details before renaming this file to CITATION.cff."
+title: "Scientific Software / Tool — replace with project title"
+authors:
+  - family-names: "Replace"
+    given-names: "Maintainer"
+version: "0.1.0"

@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "project": {
+    "name": "Example Working Group",
+    "slug": "example-working-group",
+    "description": "Illustrative working group metadata; replace before submitting."
+  },
+  "eagle": {
+    "mission": [
+      "supporting-technology"
+    ],
+    "topics": []
+  },
+  "project_type": "working-group",
+  "status": "planning",
+  "collaboration": {
+    "open": false,
+    "looking_for": []
+  },
+  "repository": "https://github.com/example/example-working-group"
+}
