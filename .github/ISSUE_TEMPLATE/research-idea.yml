@@ -1,0 +1,30 @@
+name: Research idea
+description: Propose a scientific question or review.
+labels:
+- research
+body:
+- type: markdown
+  attributes:
+    value: Thank you for contributing. Keep this concise; uncertainty and requests
+      for help are welcome. Do not include credentials or private information.
+- type: textarea
+  id: question
+  attributes:
+    label: Research question
+    description: State the question and why it matters.
+  validations:
+    required: true
+- type: textarea
+  id: evidence
+  attributes:
+    label: Evidence and data
+    description: Sources, sensor relevance, assumptions and uncertainties.
+  validations:
+    required: true
+- type: textarea
+  id: outcome
+  attributes:
+    label: Smallest useful outcome
+    description: Expected deliverable and expertise or collaborators needed.
+  validations:
+    required: true

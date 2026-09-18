@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a reproducible problem.
+body:
+- type: markdown
+  attributes:
+    value: Thank you for contributing. Keep this concise; uncertainty and requests
+      for help are welcome. Do not include credentials or private information.
+- type: textarea
+  id: problem
+  attributes:
+    label: What happened?
+    description: Include expected and actual behavior.
+  validations:
+    required: true
+- type: textarea
+  id: steps
+  attributes:
+    label: How can we reproduce it?
+    description: Commands or steps; use a small example.
+  validations:
+    required: true
+- type: textarea
+  id: environment
+  attributes:
+    label: Environment and evidence
+    description: OS, Python/CLI version, and sanitized error text.
+  validations:
+    required: true

@@ -1,0 +1,29 @@
+name: Collaboration request
+description: Find collaborators or offer mentoring.
+body:
+- type: markdown
+  attributes:
+    value: Thank you for contributing. Keep this concise; uncertainty and requests
+      for help are welcome. Do not include credentials or private information.
+- type: textarea
+  id: goal
+  attributes:
+    label: What are you working toward?
+    description: Concrete question or deliverable; link a project if available.
+  validations:
+    required: true
+- type: textarea
+  id: help
+  attributes:
+    label: What help can you offer or need?
+    description: Roles, skills, expected credit, and availability. No private contact
+      details required.
+  validations:
+    required: true
+- type: textarea
+  id: first
+  attributes:
+    label: What is the first useful step?
+    description: A small task or conversation others can respond to.
+  validations:
+    required: true
