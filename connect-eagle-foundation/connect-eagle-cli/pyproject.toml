@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "connect-eagle"
+version = "0.1.0"
+description = "Connect existing Git projects to the C.O.N.N.E.C.T. EAGLE community"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["typer>=0.16,<1", "PyYAML>=6.0.2,<7", "jsonschema>=4.23,<5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "build>=1,<2"]
+
+[project.scripts]
+connect-eagle = "connect_eagle.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+connect_eagle = ["schemas/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
