@@ -7,11 +7,11 @@
 | You need… | Where to go now |
 | --- | --- |
 | Help with a task | Comment on its issue or PR |
-| General onboarding help | [Open a question](https://github.com/CONNECT-SBG/testrepo/issues/15) |
-| A bug fixed | [Bug report](https://github.com/CONNECT-SBG/testrepo/issues/new?template=bug-report.yml) |
-| Collaborators or mentoring | [Collaboration request](https://github.com/CONNECT-SBG/testrepo/issues/new?template=collaboration-request.yml) |
-| Feedback on an idea | [Research idea](https://github.com/CONNECT-SBG/testrepo/issues/new?template=research-idea.yml) |
-| A resource shared | [Educational resource proposal](https://github.com/CONNECT-SBG/testrepo/issues/new?template=educational-resource.yml) |
+| General onboarding help | [Open a question](https://github.com/CONNECT-EAGLE/testrepo/issues/15) |
+| A bug fixed | [Bug report](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=bug-report.yml) |
+| Collaborators or mentoring | [Collaboration request](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=collaboration-request.yml) |
+| Feedback on an idea | [Research idea](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=research-idea.yml) |
+| A resource shared | [Educational resource proposal](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=educational-resource.yml) |
 
 GitHub Discussions is not enabled yet. Until it is, question and collaboration issues provide a public, discoverable fallback. Work remains in actionable issues; when Discussions is available, maintainers can move conversational threads there and leave redirects.
 

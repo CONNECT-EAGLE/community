@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "connect-eagle"
-version = "0.1.0"
+version = "0.1.1"
 description = "Connect existing Git projects to the C.O.N.N.E.C.T. EAGLE community"
 readme = "README.md"
 requires-python = ">=3.11"

@@ -14,7 +14,7 @@ runner = CliRunner()
 def test_version_without_subcommand():
     result = runner.invoke(app, ["--version"])
     assert result.exit_code == 0
-    assert "0.1.0" in result.output
+    assert "0.1.1" in result.output
 
 
 def test_main_reports_errors_without_traceback(tmp_path):

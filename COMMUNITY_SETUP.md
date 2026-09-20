@@ -1,6 +1,6 @@
 # Community launch audit and administrator checklist
 
-Audit: 2026-09-18. This is a maintainer handoff; newcomers should use [Start here](START_HERE.md).
+Latest audit: 2026-09-20. Initial setup: 2026-09-18. This is a maintainer handoff; newcomers should use [Start here](START_HERE.md).
 
 ## What a stranger encountered
 
@@ -19,11 +19,20 @@ The connected installation exposed two repositories; the public page exposed one
 
 ## Publishing decisions
 
-- Preserve the `CONNECT-SBG` organization slug and `testrepo` repository name to keep existing links and history.
+- The organization is now `CONNECT-EAGLE`. Use that slug in current links and commands. Preserve the `testrepo` repository and original research history; no repository split or rename is needed to contribute.
 - Use the current public repository as a consolidated hub, with clear navigation to tools and registry. Additional repositories can be split later when their maintenance benefits justify it.
 - Merge foundation PR #2 only after its six platform/version jobs passed, then publish this contributor update through a separate PR.
 - Keep original scientific files and their licensing status unchanged. Do not enroll outside projects, fabricate contributors, or advertise mentors without their agreement.
 - Keep dedicated security and conduct reporting contacts explicitly unconfigured until the owner names them.
+
+## September 20 contribution-path update
+
+- Updated current links, forms, installation commands, and issue bodies to `CONNECT-EAGLE`. Historical scientific files remain unchanged.
+- Added CLI v0.1.1 `submit --registry CONNECT-EAGLE/testrepo --issue` to request review in the existing hub, with duplicate protection and a no-write dry run. Dedicated-registry PR submission remains separate.
+- Added a schema-valid fictional submission example outside the production registry and a maintainer review checklist.
+- Existing contribution issues remain the task queue; no duplicate opportunity issues are needed.
+- Repository writes work through the connector. The settings browser is signed out; descriptions, visibility, pins, Discussions, and private reporting are still pending.
+- Validation: 65 CLI tests, lint, template validation, registry validation, directory checks, and package build. GitHub Actions must pass before merging this update. A real external contributor has not yet exercised authenticated CLI issue submission.
 
 ## Remaining administrator actions
 
