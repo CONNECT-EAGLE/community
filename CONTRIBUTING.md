@@ -30,6 +30,8 @@ Code, documentation, scientific review, tutorials, dataset validation, examples,
 
 Do not upload credentials, unpublished private data, large downloaded scenes, or material you lack permission to redistribute. Refer to dataset landing pages or DOIs. Preserve attribution; registration does not grant a license to the underlying project.
 
+For maintainers processing project submissions, see the [review checklist](MAINTAINERS.md).
+
 ## Review and acceptance
 
 Maintainers check scope, clarity, relevant tests, provenance, and the issue's acceptance criteria. Scientific claims require a reviewer who can assess the method; passing software tests does not validate science. Merge follows review and passing applicable checks. If the team lacks the needed expertise, the work stays provisional and the gap is recorded.

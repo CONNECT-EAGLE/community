@@ -258,9 +258,14 @@ def submit(
     push: Annotated[
         bool, typer.Option(help="Create a registry branch and GitHub pull request.")
     ] = False,
+    issue: Annotated[
+        bool, typer.Option(help="Open a project review issue in --registry OWNER/HUB.")
+    ] = False,
     dry_run: bool = False,
 ) -> None:
-    """Prepare a registration; --push explicitly opens a GitHub PR in --registry."""
+    """Prepare a packet; --issue opens hub review; --push opens a dedicated-registry PR."""
+    if push and issue:
+        raise EagleError("Choose either --issue for hub review or --push for a registry PR.")
     repo = Repository.discover(path)
     problems = repo.unsafe_states()
     if problems:
@@ -268,26 +273,33 @@ def submit(
     data = project_metadata(repo)
     if registry:
         registry_name(registry)
-    if push and not registry:
+    if (push or issue) and not registry:
         raise EagleError(
-            "--push requires --registry OWNER/project-registry or CONNECT_EAGLE_REGISTRY."
+            "--issue/--push requires --registry OWNER/REPOSITORY or CONNECT_EAGLE_REGISTRY."
         )
     slug = data["project"]["slug"]
     typer.echo(
         f"Project: {slug}\nRecord: projects/{slug}.yml\nRegistry: {registry or 'not selected'}"
     )
+    typer.echo("Route: " + ("review issue" if issue else "registry PR" if push else "local packet"))
     if dry_run:
         typer.echo("Dry run: validated; no files or remote resources changed.")
         return
     content = dump(data)
-    if push:
-        url = GitHub(repo.root).register(registry, data, content)
+    if push or issue:
+        client = GitHub(repo.root)
+        url = (
+            client.submit_issue(registry, data, content)
+            if issue else client.register(registry, data, content)
+        )
         destination = repo.git_dir / "connect-eagle"
         destination.mkdir(parents=True, exist_ok=True)
         (destination / "receipt.json").write_text(
             json.dumps({"registry": registry, "url": url}) + "\n", encoding="utf-8"
         )
         typer.echo(url)
+        if issue:
+            typer.echo("Review requested, not yet registered. Complete the authority section in the issue.")
     else:
         destination = repo.git_dir / "connect-eagle" / "submissions" / slug
         destination.mkdir(parents=True, exist_ok=True)
@@ -298,7 +310,9 @@ def submit(
             encoding="utf-8",
         )
         typer.echo(
-            f"Prepared {destination}\nTo open a PR: connect-eagle submit --registry OWNER/project-registry --push"
+            f"Prepared {destination}\nFor CONNECT EAGLE review: connect-eagle submit "
+            "--registry CONNECT-EAGLE/testrepo --issue\n"
+            "For a dedicated registry PR: connect-eagle submit --registry OWNER/project-registry --push"
         )
 
 

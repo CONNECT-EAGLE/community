@@ -46,6 +46,60 @@ class GitHub:
                 "GitHub returned an unexpected response. Retry with a current gh version."
             ) from exc
 
+    def submit_issue(self, hub: str, data: dict, content: str) -> str:
+        """Open an owner-authored review request in an existing community hub."""
+        registry_name(hub)
+        validate(data)
+        self.auth()
+        username = self.api("user")["login"]
+        upstream = self.api(f"repos/{hub}")
+        if upstream.get("archived") or upstream.get("disabled"):
+            raise EagleError("The selected hub is archived or disabled.")
+        if not upstream.get("has_issues", False):
+            raise EagleError("The selected hub does not have issues enabled.")
+        identity = hashlib.sha256(public_url(data["repository"]).casefold().encode()).hexdigest()
+        marker = f"<!-- connect-eagle-project:{identity} -->"
+        snapshot = f"<!-- connect-eagle-snapshot:{hashlib.sha256(content.encode()).hexdigest()} -->"
+        page = 1
+        while True:
+            issues = self.api(
+                f"repos/{hub}/issues?state=open&creator={username}&per_page=100&page={page}"
+            )
+            for issue in issues:
+                if "pull_request" in issue or issue.get("user", {}).get("login") != username:
+                    continue
+                body = issue.get("body") or ""
+                if marker in body:
+                    if snapshot in body:
+                        return issue["html_url"]
+                    raise EagleError(
+                        f"An open submission already exists: {issue['html_url']}. "
+                        "Update that issue with your revised metadata; no duplicate was created."
+                    )
+            if len(issues) < 100:
+                break
+            page += 1
+        # A longer fence keeps user-authored metadata inside one literal code block.
+        fence = "`" * max(3, 1 + max((len(s) for s in re.findall(r"`+", content)), default=0))
+        issue = self.api(
+            f"repos/{hub}/issues", "POST", {
+                "title": f"Project submission: {data['project']['slug']}",
+                "body": (
+                    f"{marker}\n{snapshot}\n\n"
+                    "## Project registration request\n\n"
+                    f"Repository: {data['repository']}\n\n"
+                    "This requests community review; it does not register the project yet.\n\n"
+                    "### Maintainer authority\n\n"
+                    "- [ ] I maintain this repository or have its maintainer's agreement.\n\n"
+                    "Edit this issue to explain your authority and any missing license or citation. "
+                    "Maintainers verify ownership and prepare a registry PR before acceptance.\n\n"
+                    f"### Metadata snapshot\n\n{fence}yaml\n{content.rstrip()}\n{fence}\n\n"
+                    "Registration preserves repository ownership and does not imply NASA endorsement."
+                ),
+            },
+        )
+        return issue["html_url"]
+
     def register(self, registry: str, data: dict, content: str) -> str:
         registry_name(registry)
         validate(data)
