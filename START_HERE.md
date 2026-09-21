@@ -6,7 +6,7 @@ You do not need organization membership, NASA affiliation, or a software backgro
 
 ## A. Help an existing project
 
-Choose an unclaimed [beginner task](OPPORTUNITIES.md#beginner) or browse the [issue queue](https://github.com/CONNECT-EAGLE/testrepo/issues). Read its acceptance criteria, check comments and linked PRs, then comment: “I'd like to take this. My plan is …”. Follow [the contribution steps](CONTRIBUTING.md). Small documentation work can start while a maintainer confirms the claim; coordinate before substantial work.
+Choose an unclaimed [beginner task](OPPORTUNITIES.md#beginner) or browse the [contribution board](https://github.com/orgs/CONNECT-EAGLE/projects/2/views/1). Read its acceptance criteria, check comments and linked PRs, then comment: “I'd like to take this. My plan is …”. Follow [the contribution steps](CONTRIBUTING.md). Small documentation work can start while a maintainer confirms the claim; coordinate before substantial work.
 
 ## B. Connect a project you already own
 

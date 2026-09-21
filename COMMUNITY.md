@@ -7,13 +7,13 @@
 | You need… | Where to go now |
 | --- | --- |
 | Help with a task | Comment on its issue or PR |
-| General onboarding help | [Open a question](https://github.com/CONNECT-EAGLE/testrepo/issues/15) |
+| General onboarding help | [Help discussions](https://github.com/orgs/CONNECT-EAGLE/discussions/categories/help) |
 | A bug fixed | [Bug report](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=bug-report.yml) |
 | Collaborators or mentoring | [Collaboration request](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=collaboration-request.yml) |
 | Feedback on an idea | [Research idea](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=research-idea.yml) |
 | A resource shared | [Educational resource proposal](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=educational-resource.yml) |
 
-GitHub Discussions is not enabled yet. Until it is, question and collaboration issues provide a public, discoverable fallback. Work remains in actionable issues; when Discussions is available, maintainers can move conversational threads there and leave redirects.
+[Organization Discussions](https://github.com/orgs/CONNECT-EAGLE/discussions) is live. Use it for questions, ideas, and introductions; keep actionable work in issues. The original [onboarding help thread #15](https://github.com/CONNECT-EAGLE/testrepo/issues/15) remains available for continuity.
 
 ## Meet through useful work
 
@@ -21,9 +21,9 @@ Introduce your interests through a collaboration request linked to a concrete pr
 
 The current setup contact is [Fares Alhezaimi (@falhezaimi)](https://github.com/falhezaimi). Use public task threads for routine requests so progress does not depend on direct messages. No other mentors or maintainers are advertised without their agreement.
 
-## Proposed discussion spaces
+## Discussion spaces
 
-When activated, keep six categories: **Announcements**, **Help** (Q&A), **Research Ideas**, **Projects & Collaboration**, **Education & Resources**, and **Showcase**. Use VSWIR, TIR, and multi-sensor labels where supported rather than multiplying categories. Announcements summarize actual changes; Showcase links completed work and its contributors.
+The community has six focused categories: **Announcements**, **Help** (Q&A), **Research Ideas**, **Projects & Collaboration**, **Education & Resources**, and **Showcase**, alongside GitHub’s default Polls category. Use VSWIR, TIR, and multi-sensor labels where supported rather than multiplying categories. Announcements summarize actual changes; Showcase links completed work and its contributors.
 
 ## Respect and reporting
 

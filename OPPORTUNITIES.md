@@ -36,7 +36,6 @@ Five scoped entry points. No organization membership is needed; several require 
 | Opportunity | Type | Status / claim |
 | --- | --- | --- |
 | [#13 — Write a verified Windows installation walkthrough](https://github.com/CONNECT-EAGLE/testrepo/issues/13) | Documentation | [Check issue](https://github.com/CONNECT-EAGLE/testrepo/issues/13) |
-| [#14 — Write a real project-submission example without registering a fake project](https://github.com/CONNECT-EAGLE/testrepo/issues/14) | Documentation | [Check issue](https://github.com/CONNECT-EAGLE/testrepo/issues/14) |
 
 ## Find work by topic
 
@@ -46,6 +45,8 @@ Five scoped entry points. No organization membership is needed; several require 
 
 **Ideas → Ready → In Progress → Review → Done.** Ideas need a defined outcome; Ready issues have acceptance criteria; a confirmed claim starts work; an open PR or review note moves it into review; accepted work closes the issue. GitHub issue comments and linked PRs record these transitions.
 
-A native organization Projects board has not been created yet. This page and the live issue filters are the working opportunities index. The intended board uses the five statuses above and existing labels for views, with no extra reporting burden.
+The public [CONNECT EAGLE Opportunities board](https://github.com/orgs/CONNECT-EAGLE/projects/2/views/1) contains the 11 open launch tasks and all five statuses. Maintainers update board status as work progresses; issue comments and linked PRs remain the source of truth. New issues need to be added to the board.
+
+Completed: [#14 — Project-submission example](docs/project-submission-example.md).
 
 Have a different idea? [Propose it](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=research-idea.yml) or [ask for guidance](https://github.com/CONNECT-EAGLE/testrepo/issues/15).
