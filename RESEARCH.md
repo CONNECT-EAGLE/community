@@ -1,6 +1,6 @@
 # Research participation without a coding requirement
 
-[Research opportunities](OPPORTUNITIES.md#research-and-science) · [Propose an idea](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=research-idea.yml)
+[Research opportunities](OPPORTUNITIES.md#research-and-science) · [Propose an idea](https://github.com/CONNECT-EAGLE/community/issues/new?template=research-idea.yml)
 
 Scientific review, problem formulation, interpretation, and dataset validation are contributions in their own right. A review can be a referenced Markdown note or an issue comment. Distinguish an observation, an interpretation, and an untested hypothesis.
 

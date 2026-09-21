@@ -1,6 +1,6 @@
 # Engineering handoff
 
-The implemented v0.1 is published under `connect-eagle-foundation/` on `feat/connect-eagle-foundation` in `CONNECT-SBG/testrepo`: [PR #2](https://github.com/CONNECT-EAGLE/testrepo/pull/2). Installing the connector on the organization resolved the initial HTTP 403. Historical scientific files remain intact. Start with `VERIFICATION.md` for current evidence and `AUDIT_AND_MIGRATION.md` for migration decisions.
+The implemented v0.1 is published under `connect-eagle-foundation/` on `feat/connect-eagle-foundation` in `CONNECT-SBG/testrepo`: [PR #2](https://github.com/CONNECT-EAGLE/community/pull/2). Installing the connector on the organization resolved the initial HTTP 403. Historical scientific files remain intact. Start with `VERIFICATION.md` for current evidence and `AUDIT_AND_MIGRATION.md` for migration decisions.
 
 ## Run now
 

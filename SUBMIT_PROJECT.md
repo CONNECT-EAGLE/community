@@ -6,7 +6,7 @@ Keep ownership, issues, releases, and scientific decisions in your own repositor
 
 ## Simplest route: use your browser
 
-1. Open a [project submission](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=project-submission.yml).
+1. Open a [project submission](https://github.com/CONNECT-EAGLE/community/issues/new?template=project-submission.yml).
 2. Provide the repository, a short description, VSWIR/TIR/supporting-EO relevance, project type, current status, maintainer, and whether you want collaborators.
 3. Confirm you maintain the project or have the maintainer's agreement. A reviewer verifies the public repository and ownership evidence, asks for missing details, and helps prepare a registry PR.
 4. After the record is reviewed and merged, it appears in [Projects](PROJECTS.md).
@@ -16,7 +16,7 @@ Keep ownership, issues, releases, and scientific decisions in your own repositor
 Install from the published source (Python 3.11+, Git; pipx must already be installed):
 
 ```sh
-pipx install 'git+https://github.com/CONNECT-EAGLE/testrepo.git@main#subdirectory=connect-eagle-foundation/connect-eagle-cli'
+pipx install 'git+https://github.com/CONNECT-EAGLE/community.git@main#subdirectory=connect-eagle-foundation/connect-eagle-cli'
 ```
 
 Inside your own Git project:
@@ -33,8 +33,8 @@ With [GitHub CLI](https://cli.github.com/) installed and signed in, request revi
 
 ```sh
 gh auth login --hostname github.com
-connect-eagle submit --registry CONNECT-EAGLE/testrepo --issue --dry-run
-connect-eagle submit --registry CONNECT-EAGLE/testrepo --issue
+connect-eagle submit --registry CONNECT-EAGLE/community --issue --dry-run
+connect-eagle submit --registry CONNECT-EAGLE/community --issue
 ```
 
 `--issue` publishes your metadata snapshot in a public project-submission issue. Open the returned link, confirm your maintainer authority, and answer any review questions. An identical open submission by your account is reused; a changed snapshot asks you to update that issue instead of creating duplicates. Your project files, remotes, and Git history stay under your control.

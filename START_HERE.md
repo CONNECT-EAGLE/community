@@ -10,15 +10,15 @@ Choose an unclaimed [beginner task](OPPORTUNITIES.md#beginner) or browse the [co
 
 ## B. Connect a project you already own
 
-Open a [project submission](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=project-submission.yml). Share the repository URL, purpose, mission relevance, and whether you want collaborators. No repository transfer or CLI installation is required. [CLI and YAML instructions](SUBMIT_PROJECT.md) are available if you prefer them.
+Open a [project submission](https://github.com/CONNECT-EAGLE/community/issues/new?template=project-submission.yml). Share the repository URL, purpose, mission relevance, and whether you want collaborators. No repository transfer or CLI installation is required. [CLI and YAML instructions](SUBMIT_PROJECT.md) are available if you prefer them.
 
 ## C. Learn Earth observation
 
-Start with the [VSWIR/TIR primer and official resources](LEARN.md). Pick one resource, describe what you learned, and propose a useful addition through the [education form](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=educational-resource.yml). You can contribute clearer wording or terminology without running code.
+Start with the [VSWIR/TIR primer and official resources](LEARN.md). Pick one resource, describe what you learned, and propose a useful addition through the [education form](https://github.com/CONNECT-EAGLE/community/issues/new?template=educational-resource.yml). You can contribute clearer wording or terminology without running code.
 
 ## D. Find collaborators
 
-Open a [collaboration request](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=collaboration-request.yml). State a concrete question or deliverable, the help you need, your availability, and what participants can gain or learn. Link a project if one exists. A speculative idea is welcome when clearly labeled.
+Open a [collaboration request](https://github.com/CONNECT-EAGLE/community/issues/new?template=collaboration-request.yml). State a concrete question or deliverable, the help you need, your availability, and what participants can gain or learn. Link a project if one exists. A speculative idea is welcome when clearly labeled.
 
 ## E. Participate as a mentor or researcher
 

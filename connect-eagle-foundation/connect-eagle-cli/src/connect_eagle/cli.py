@@ -311,7 +311,7 @@ def submit(
         )
         typer.echo(
             f"Prepared {destination}\nFor CONNECT EAGLE review: connect-eagle submit "
-            "--registry CONNECT-EAGLE/testrepo --issue\n"
+            "--registry CONNECT-EAGLE/community --issue\n"
             "For a dedicated registry PR: connect-eagle submit --registry OWNER/project-registry --push"
         )
 
