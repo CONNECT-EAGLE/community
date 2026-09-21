@@ -1,6 +1,6 @@
 # Community launch audit and administrator checklist
 
-Latest audit: 2026-09-20. Initial setup: 2026-09-18. This is a maintainer handoff; newcomers should use [Start here](START_HERE.md).
+Latest audit: 2026-09-21. Initial setup: 2026-09-18. This is a maintainer handoff; newcomers should use [Start here](START_HERE.md).
 
 ## What a stranger encountered
 
@@ -31,25 +31,23 @@ The connected installation exposed two repositories; the public page exposed one
 - Added CLI v0.1.1 `submit --registry CONNECT-EAGLE/testrepo --issue` to request review in the existing hub, with duplicate protection and a no-write dry run. Dedicated-registry PR submission remains separate.
 - Added a schema-valid fictional submission example outside the production registry and a maintainer review checklist.
 - Existing contribution issues remain the task queue; no duplicate opportunity issues are needed.
-- Repository writes work through the connector. The settings browser is signed out; descriptions, visibility, pins, Discussions, and private reporting are still pending.
+- Contributor update PR #17 merged after all 13 CI runs passed. The settings work below was completed after administrator sign-in.
 - Validation: 65 CLI tests, lint, template validation, registry validation, directory checks, and package build. GitHub Actions must pass before merging this update. A real external contributor has not yet exercised authenticated CLI issue submission.
 
-## Remaining administrator actions
+## September 21 live settings
 
-The GitHub connector can publish files, issues, labels, and PRs. It does not expose repository descriptions/visibility, organization profile settings, pins, Discussions categories, or Projects creation. The separate browser currently requires GitHub sign-in for these controls.
+- Set the organization display name to **C.O.N.N.E.C.T. EAGLE**, added its independent-community description, and linked Start here.
+- Added descriptions to both repositories and pinned the public hub on the organization homepage.
+- Enabled hub and organization [Discussions](https://github.com/orgs/CONNECT-EAGLE/discussions): Announcements, Help (Q&A), Research Ideas, Projects & Collaboration, Education & Resources, and Showcase. The default Polls category remains available.
+- Created the public [CONNECT EAGLE Opportunities board](https://github.com/orgs/CONNECT-EAGLE/projects/2/views/1), with 11 open issues (#3–13) in Ready and statuses Ideas, Ready, In Progress, Review, and Done. New issues require adding to the board; automatic import is not configured.
+- Enabled private vulnerability reporting on the hub. See [Security](SECURITY.md).
+- Completed the submission example (#14); it is no longer an open opportunity.
 
-| Action | Exact proposed setting |
-| --- | --- |
-| Organization display name | `C.O.N.N.E.C.T. EAGLE` |
-| Organization description | `Independent Earth-observation community for EAGLE VSWIR/TIR research, open tools, education, and collaboration.` |
-| `testrepo` description | `Community hub, contribution opportunities, and tools for C.O.N.N.E.C.T. EAGLE; preserves CONNECT-SBG research history.` |
-| `.github` description | `Organization profile and shared contribution guidelines, issue forms, and PR templates for C.O.N.N.E.C.T. EAGLE.` |
-| `.github` visibility | Public, after reviewing its existing history for information that should stay private |
-| Public pins | Pin `testrepo` as the community hub. Add dedicated tools/registry repositories only when they actually exist. |
-| Discussions | Enable in the public hub: Announcements, Help (Q&A), Research Ideas, Projects & Collaboration, Education & Resources, Showcase |
-| Project board | `CONNECT EAGLE Opportunities`; statuses Ideas, Ready, In Progress, Review, Done; add issues #3–14; filter by existing labels |
-| Moderation | Name a private reporting route and a second consenting moderator before broad recruitment |
-| Security | Enable private vulnerability reporting or publish a verified private security contact |
+## Remaining owner decisions and validation
+
+- **The `.github` repository remains private.** Its prepared profile and inherited defaults are not publicly active. Automatic approval review blocked changing visibility because publication exposes files, commit history, activity, and any Actions logs. Obtain explicit owner approval for that disclosure before continuing. Current contribution forms and guides are already available in the public hub.
+- Designate a private conduct-reporting route and a second consenting moderator before broad recruitment. The security reporting route is not a substitute for conduct reporting.
+- Have a real external contributor exercise authenticated CLI issue submission. Automated tests and CI passed, but that live external-user walkthrough has not been performed.
 
 [GitHub documents](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file) that the `.github` repository must be public for inherited defaults, with forms in `.github/ISSUE_TEMPLATE`. The [organization profile instructions](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile) specify `profile/README.md` and owner-controlled pins. Publishing those files alone does not change repository visibility or pin anything.
 
@@ -60,11 +58,11 @@ The GitHub connector can publish files, issues, labels, and PRs. It does not exp
 | What is this? | Root README: independent EO research, tools, learning and collaboration community |
 | What are VSWIR/TIR? | Plain-language README definitions and the official NASA EAGLE link |
 | Where do I start? | START_HERE.md: five pathways with an immediate action |
-| What can I contribute to? | OPPORTUNITIES.md: 12 real issues with acceptance criteria |
+| What can I contribute to? | OPPORTUNITIES.md and public board: 11 open issues with acceptance criteria |
 | Can beginners participate? | Five `good first issue` / `beginner` tasks |
 | Can scientists participate without coding? | Two research reviews and referenced-comment contribution route |
 | Can I register my own project? | Browser submission form; YAML and CLI alternatives; no transfer required |
-| Where do I ask questions? | Public help thread #15 and task-specific threads |
+| Where do I ask questions? | Help Discussions, existing thread #15, and task-specific threads |
 | Which projects are active? | PROJECTS.md: infrastructure separated from accepted registry records; no invented memberships |
 
-The repository experience can be checked independently of the organization homepage. The full organization launch remains incomplete until the visibility, description, and pin settings above are applied and the public homepage is checked again.
+The repository experience can be checked independently of the organization homepage. The public hub accepts contributions now. Organization-wide profile/default publication and the remaining owner decisions above are still outstanding.
