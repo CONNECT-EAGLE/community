@@ -20,7 +20,7 @@ These are official external resources, not community-maintained projects. Some d
 
 ## Bring a resource
 
-Use the [education proposal form](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=educational-resource.yml). Include the audience, prerequisite knowledge, learning outcome, link, and reuse terms. Prefer a focused resource that helps someone complete a real task. Clearly label synthetic examples and provide text alternatives for figures.
+Use the [education proposal form](https://github.com/CONNECT-EAGLE/community/issues/new?template=educational-resource.yml). Include the audience, prerequisite knowledge, learning outcome, link, and reuse terms. Prefer a focused resource that helps someone complete a real task. Clearly label synthetic examples and provide text alternatives for figures.
 
 ## Terms to build together
 

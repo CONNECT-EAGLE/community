@@ -26,8 +26,8 @@ This is an **independent community initiative**, not NASA's official EAGLE organ
 
 ## Current work
 
-**Community launch: Incubating.** The CLI, registry validator, and starter templates are usable foundations under development. Outside project registrations are reviewed individually; the [directory](PROJECTS.md) lists accepted records and clearly identifies infrastructure. Real work is available in [open issues](https://github.com/CONNECT-EAGLE/testrepo/issues).
+**Community launch: Incubating.** The CLI, registry validator, and starter templates are usable foundations under development. Outside project registrations are reviewed individually; the [directory](PROJECTS.md) lists accepted records and clearly identifies infrastructure. Real work is available in [open issues](https://github.com/CONNECT-EAGLE/community/issues).
 
-This repository is the community's current public hub. Its historical `testrepo` URL is retained to preserve links. Original CONNECT-SBG analyses remain available in [History](HISTORY.md); they are not represented as current maintained projects.
+This repository is the community's current public hub. It is named `community` so contributors can identify its purpose immediately. Original CONNECT-SBG analyses remain available in [History](HISTORY.md); they are not represented as current maintained projects.
 
 [Contribute](CONTRIBUTING.md) · [Community conduct](CODE_OF_CONDUCT.md) · [Credits](CONTRIBUTORS.md) · [Lifecycle](LIFECYCLE.md)

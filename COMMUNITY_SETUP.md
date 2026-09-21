@@ -19,7 +19,7 @@ The connected installation exposed two repositories; the public page exposed one
 
 ## Publishing decisions
 
-- The organization is now `CONNECT-EAGLE`. Use that slug in current links and commands. Preserve the `testrepo` repository and original research history; no repository split or rename is needed to contribute.
+- The organization is now `CONNECT-EAGLE`. Use that slug in current links and commands. The hub was renamed from `testrepo` to `community` on September 21; its original research history and issues are preserved.
 - Use the current public repository as a consolidated hub, with clear navigation to tools and registry. Additional repositories can be split later when their maintenance benefits justify it.
 - Merge foundation PR #2 only after its six platform/version jobs passed, then publish this contributor update through a separate PR.
 - Keep original scientific files and their licensing status unchanged. Do not enroll outside projects, fabricate contributors, or advertise mentors without their agreement.
@@ -28,7 +28,7 @@ The connected installation exposed two repositories; the public page exposed one
 ## September 20 contribution-path update
 
 - Updated current links, forms, installation commands, and issue bodies to `CONNECT-EAGLE`. Historical scientific files remain unchanged.
-- Added CLI v0.1.1 `submit --registry CONNECT-EAGLE/testrepo --issue` to request review in the existing hub, with duplicate protection and a no-write dry run. Dedicated-registry PR submission remains separate.
+- Added CLI v0.1.1 `submit --registry CONNECT-EAGLE/community --issue` to request review in the existing hub, with duplicate protection and a no-write dry run. Dedicated-registry PR submission remains separate.
 - Added a schema-valid fictional submission example outside the production registry and a maintainer review checklist.
 - Existing contribution issues remain the task queue; no duplicate opportunity issues are needed.
 - Contributor update PR #17 merged after all 13 CI runs passed. The settings work below was completed after administrator sign-in.

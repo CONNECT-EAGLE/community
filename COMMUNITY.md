@@ -8,12 +8,12 @@
 | --- | --- |
 | Help with a task | Comment on its issue or PR |
 | General onboarding help | [Help discussions](https://github.com/orgs/CONNECT-EAGLE/discussions/categories/help) |
-| A bug fixed | [Bug report](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=bug-report.yml) |
-| Collaborators or mentoring | [Collaboration request](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=collaboration-request.yml) |
-| Feedback on an idea | [Research idea](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=research-idea.yml) |
-| A resource shared | [Educational resource proposal](https://github.com/CONNECT-EAGLE/testrepo/issues/new?template=educational-resource.yml) |
+| A bug fixed | [Bug report](https://github.com/CONNECT-EAGLE/community/issues/new?template=bug-report.yml) |
+| Collaborators or mentoring | [Collaboration request](https://github.com/CONNECT-EAGLE/community/issues/new?template=collaboration-request.yml) |
+| Feedback on an idea | [Research idea](https://github.com/CONNECT-EAGLE/community/issues/new?template=research-idea.yml) |
+| A resource shared | [Educational resource proposal](https://github.com/CONNECT-EAGLE/community/issues/new?template=educational-resource.yml) |
 
-[Organization Discussions](https://github.com/orgs/CONNECT-EAGLE/discussions) is live. Use it for questions, ideas, and introductions; keep actionable work in issues. The original [onboarding help thread #15](https://github.com/CONNECT-EAGLE/testrepo/issues/15) remains available for continuity.
+[Organization Discussions](https://github.com/orgs/CONNECT-EAGLE/discussions) is live. Use it for questions, ideas, and introductions; keep actionable work in issues. The original [onboarding help thread #15](https://github.com/CONNECT-EAGLE/community/issues/15) remains available for continuity.
 
 ## Meet through useful work
 

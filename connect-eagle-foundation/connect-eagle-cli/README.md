@@ -15,7 +15,7 @@ pipx install .
 Install the current published source:
 
 ```sh
-pipx install 'git+https://github.com/CONNECT-EAGLE/testrepo.git@main#subdirectory=connect-eagle-foundation/connect-eagle-cli'
+pipx install 'git+https://github.com/CONNECT-EAGLE/community.git@main#subdirectory=connect-eagle-foundation/connect-eagle-cli'
 ```
 
 The package is **not yet published to PyPI**. `pipx install connect-eagle` is the intended release experience, not a currently promised package name. Check name availability before publishing.
@@ -52,14 +52,14 @@ connect-eagle init --non-interactive --mission both --type software --descriptio
 | `doctor --online` | Also check remotes and GitHub authentication |
 | `submit` | Save a registration packet under the Git directory; no network writes |
 | `submit --dry-run` | Validate and preview without writing anything |
-| `submit --registry CONNECT-EAGLE/testrepo --issue` | Open a review issue in the current community hub; confirm authority in the returned issue |
+| `submit --registry CONNECT-EAGLE/community --issue` | Open a review issue in the current community hub; confirm authority in the returned issue |
 | `submit --registry OWNER/project-registry --push` | Create a registry feature branch and PR; fork when necessary |
 | `registry validate --directory projects` | Validate all registry entries and detect collisions |
 | `registry export --directory projects --output catalog.json` | Export deterministic JSON; refuses to overwrite output |
 
 Use `--path DIRECTORY` with the four contributor commands. The registry can also be set through `CONNECT_EAGLE_REGISTRY`.
 
-For the current hub, use `connect-eagle submit --registry CONNECT-EAGLE/testrepo --issue`. This posts your metadata publicly for review; it does not enroll the project. Repeated identical open submissions are reused, while changed snapshots require updating the existing issue. Run `gh auth login --hostname github.com` first. `--dry-run` performs no network calls or writes. `--issue` and `--push` are mutually exclusive.
+For the current hub, use `connect-eagle submit --registry CONNECT-EAGLE/community --issue`. This posts your metadata publicly for review; it does not enroll the project. Repeated identical open submissions are reused, while changed snapshots require updating the existing issue. Run `gh auth login --hostname github.com` first. `--dry-run` performs no network calls or writes. `--issue` and `--push` are mutually exclusive.
 
 For the separate `--push` route, publish the registry foundation so its default branch has `projects/README.md`, then run `gh auth login --hostname github.com`. An existing PR is reused. A changed record for another repository cannot overwrite an occupied slug. API failures stop cleanly; a created fork or branch may remain and can be inspected/reused on retry. A fork still being provisioned by GitHub may require a later retry.
 
@@ -76,4 +76,4 @@ python -m ruff check src tests
 python -m build
 ```
 
-See `docs/metadata-v1.md` and `docs/architecture.md`. The CI matrix runs on Windows, macOS and Linux with Python 3.11 and 3.12; see [Actions](https://github.com/CONNECT-EAGLE/testrepo/actions) for current results. Network mutation is contract-tested using a fake GitHub API; see the foundation verification report for the exact live checks performed.
+See `docs/metadata-v1.md` and `docs/architecture.md`. The CI matrix runs on Windows, macOS and Linux with Python 3.11 and 3.12; see [Actions](https://github.com/CONNECT-EAGLE/community/actions) for current results. Network mutation is contract-tested using a fake GitHub API; see the foundation verification report for the exact live checks performed.
